@@ -1,0 +1,10 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+
+dependencies {
+	def androidXAppCompatVersion =  project.hasProperty("androidXAppCompatVersion") ? project.androidXAppCompatVersion : "1.1.0"
+	def androidXPreferenceVersion =  project.hasProperty("androidXPreferenceVersion") ? project.androidXPreferenceVersion : "1.1.0"
+
+	compile "androidx.appcompat:appcompat:$androidXAppCompatVersion"
+	compile "androidx.preference:preference:$androidXPreferenceVersion"
+}

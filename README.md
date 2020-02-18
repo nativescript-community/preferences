@@ -4,20 +4,20 @@
 [twitter-url]:https://twitter.com/stevemcniven
 
 
-# nativescript-preferences
+# nativescript-akylas-preferences
 
 This plugin allows native preference saving\loading on iOS and Android
 
-<img src="https://raw.githubusercontent.com/sitefinitysteve/nativescript-preferences/master/images/ios-sample.gif" width="200" />
-<img src="https://raw.githubusercontent.com/sitefinitysteve/nativescript-preferences/master/images/android-sample.gif" width="200" />
+<img src="https://raw.githubusercontent.com/sitefinitysteve/nativescript-akylas-preferences/master/images/ios-sample.gif" width="200" />
+<img src="https://raw.githubusercontent.com/sitefinitysteve/nativescript-akylas-preferences/master/images/android-sample.gif" width="200" />
 
 ## iOS Prerequisites
 
-* Create iOS Settings.bundle files in App_Resources/iOS [See Demo](https://github.com/sitefinitysteve/nativescript-preferences/tree/master/demo/app/App_Resources/iOS/Settings.bundle)
+* Create iOS Settings.bundle files in App_Resources/iOS [See Demo](https://github.com/sitefinitysteve/nativescript-akylas-preferences/tree/master/demo/app/App_Resources/iOS/Settings.bundle)
 or [Apple Developer docs](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
 
 ## Android Prerequisites
-* In App_Resources/Android/xml create [preferences.xml](https://github.com/sitefinitysteve/nativescript-preferences/blob/master/demo/app/App_Resources/Android/xml/preferences.xml)
+* In App_Resources/Android/xml create [preferences.xml](https://github.com/sitefinitysteve/nativescript-akylas-preferences/blob/master/demo/app/App_Resources/Android/xml/preferences.xml)
 * Android [PreferenceScreen docs](https://developer.android.com/reference/android/preference/PreferenceScreen.html)
 
 ## Installation
@@ -25,7 +25,7 @@ or [Apple Developer docs](https://developer.apple.com/library/content/documentat
 Describe your plugin installation steps. Ideally it would be something like:
 
 ```javascript
-tns plugin add nativescript-preferences
+tns plugin add nativescript-akylas-preferences
 ```
 
 ## Usage 

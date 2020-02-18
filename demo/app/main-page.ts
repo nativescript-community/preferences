@@ -1,6 +1,6 @@
-import * as observable from 'tns-core-modules/data/observable';
-import * as pages from 'tns-core-modules/ui/page';
-import { Preferences } from 'nativescript-preferences';
+import * as observable from '@nativescript/core/data/observable';
+import * as pages from '@nativescript/core/ui/page';
+import { Preferences } from 'nativescript-akylas-preferences';
 
 let prefs: Preferences;
 let page;

@@ -1,5 +1,5 @@
 if ((<any>global).TNS_WEBPACK) {
-    require("tns-core-modules/bundle-entry-points");
+    require("@nativescript/core/bundle-entry-points");
 
     global.registerModule("main-page", () => require("./main-page"));
 }
