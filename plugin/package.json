@@ -1,6 +1,6 @@
 {
     "name": "nativescript-akylas-preferences",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs",
     "main": "preferences",
     "typings": "index.d.ts",
@@ -10,7 +10,6 @@
             "ios": "3.0.0"
         }
     },
-    
     "keywords": [
         "NativeScript",
         "Preferences",
@@ -26,7 +25,6 @@
         "url": "https://github.com/sitefinitysteve"
     },
     "license": "Apache-2.0",
-   
     "dependencies": {
         "nativescript-observable": "^2.0.2"
     }
