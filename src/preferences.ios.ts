@@ -49,7 +49,7 @@ export class Preferences extends Common {
             const key = eventName.replace('key:', '');
             if (!this._observer) {
                 this._observer = ObserverClass.alloc();
-                this._observer["_owner"] = this;
+                this._observer["owner"] = this;
             }
             this.userDefaults.addObserverForKeyPathOptionsContext(this._observer, key, NSKeyValueObservingOptions.New, null);
         }
@@ -65,8 +65,13 @@ export class Preferences extends Common {
 
     public clear() {}
 
+    registered = false
     //https://stackoverflow.com/questions/6291477/how-to-retrieve-values-from-settings-bundle-in-objective-c
     private registerDefaultsFromSettingsBundle() {
+        if (this.registered) {
+            return;
+        }
+        this.registered = true;
         var settingsPath = NSBundle.mainBundle.pathForResourceOfType('Settings', 'bundle');
         let settingsBundle: NSString = NSString.stringWithString(settingsPath);
         let rootPath = settingsBundle.stringByAppendingPathComponent('Root.plist');
