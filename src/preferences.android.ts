@@ -88,10 +88,8 @@ export class Preferences extends Common {
     private getPreferences() {
         if (!this.sharedPreferences) {
             this.sharedPreferences = (<android.app.Application>app.getNativeApplication()).getApplicationContext().getSharedPreferences('prefs.db', 0);
-            console.log('registering for sharedPreferences changes');
             this.listener = new android.content.SharedPreferences.OnSharedPreferenceChangeListener({
                 onSharedPreferenceChanged: (pref, key) => {
-                    console.log('onSharedPreferenceChanged', pref);
                     this.notify({
                         eventName: 'change',
                         object: this,
