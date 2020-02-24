@@ -24,3 +24,6 @@ publish/package
 demo/report/report.html
 demo/report/stats.json
 src/README.md
+/plugin/README.md
+plugin/*.ts
+plugin/**/*.aar
