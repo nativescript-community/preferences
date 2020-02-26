@@ -71,7 +71,6 @@ export class Preferences extends Common {
                 }
             };
             app.android.on(app.AndroidApplication.activityResultEvent, onActivityResultHandler);
-            console.log('startActivityForResult', com.nativescript.preferences.NativescriptSettingsActivity.class);
             try {
                 activity.startActivityForResult(new android.content.Intent(activity, com.nativescript.preferences.NativescriptSettingsActivity.class), ID);
             } catch (err) {
