@@ -4,7 +4,9 @@
 dependencies {
 	def androidXAppCompatVersion =  project.hasProperty("androidXAppCompatVersion") ? project.androidXAppCompatVersion : "1.1.0"
 	def androidXPreferenceVersion =  project.hasProperty("androidXPreferenceVersion") ? project.androidXPreferenceVersion : "1.1.0"
+	def androidXRecyclerViewVersion =  project.hasProperty("androidXRecyclerViewVersion") ? project.androidXRecyclerViewVersion : "1.1.0"
 
-	compile "androidx.appcompat:appcompat:$androidXAppCompatVersion"
-	compile "androidx.preference:preference:$androidXPreferenceVersion"
+	implementation "androidx.appcompat:appcompat:$androidXAppCompatVersion"
+	implementation "androidx.preference:preference:$androidXPreferenceVersion"
+    implementation "androidx.recyclerview:recyclerview:$androidXRecyclerViewVersion"
 }
