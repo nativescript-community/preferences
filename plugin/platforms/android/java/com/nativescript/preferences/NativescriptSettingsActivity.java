@@ -24,7 +24,8 @@ public class NativescriptSettingsActivity extends AppCompatActivity {
 
     }
 
-    public static class MainPreferenceFragment extends PreferenceFragmentCompat implements OnSharedPreferenceChangeListener {
+    public static class MainPreferenceFragment extends PreferenceFragmentCompat
+            implements OnSharedPreferenceChangeListener {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -70,16 +71,14 @@ public class NativescriptSettingsActivity extends AppCompatActivity {
             if (p instanceof ListPreference) {
                 ListPreference listPref = (ListPreference) p;
                 p.setSummary(listPref.getEntry());
-            }
-            if (p instanceof EditTextPreference) {
+            } else if (p instanceof EditTextPreference) {
                 EditTextPreference editTextPref = (EditTextPreference) p;
                 if (p.getTitle().toString().toLowerCase().contains("password")) {
                     p.setSummary("******");
                 } else {
                     p.setSummary(editTextPref.getText());
                 }
-            }
-            if (p instanceof MultiSelectListPreference) {
+            } else if (p instanceof MultiSelectListPreference) {
                 EditTextPreference editTextPref = (EditTextPreference) p;
                 p.setSummary(editTextPref.getText());
             }
