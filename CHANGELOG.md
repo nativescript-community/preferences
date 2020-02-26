@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.4...v1.1.5) (2020-02-26)
+
+
+### Bug Fixes
+
+* **android:** some native fixes ([8cb42c4](https://github.com/farfromrefug/nativescript-preferences/commit/8cb42c489e63ec4763c5c6b9e0008a0378444062))
+
+
+
+
+
 ## [1.1.4](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.3...v1.1.4) (2020-02-24)
 
 
