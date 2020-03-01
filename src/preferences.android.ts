@@ -11,17 +11,17 @@ export class Preferences extends Common {
             this.getPreferences()
                 .edit()
                 .putString(key, value)
-                .commit();
+                .apply();
         } else if (pref instanceof java.lang.Boolean) {
             this.getPreferences()
                 .edit()
                 .putBoolean(key, value)
-                .commit();
+                .apply();
         } else if (typeof pref === 'number') {
             this.getPreferences()
                 .edit()
                 .putInt(key, value)
-                .commit();
+                .apply();
         }
     }
 
@@ -51,7 +51,7 @@ export class Preferences extends Common {
         this.getPreferences()
             .edit()
             .clear()
-            .commit();
+            .apply();
     }
 
     onListenerAdded(eventName: string, count: number): void {
