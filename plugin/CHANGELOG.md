@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.5...v1.1.6) (2020-03-13)
+
+
+### Bug Fixes
+
+* show back button ([94e9bed](https://github.com/farfromrefug/nativescript-preferences/commit/94e9bedcf1fbe2f2f9ae21ab2f2a29bff6eb78cf))
+
+
+
+
+
 ## [1.1.5](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.4...v1.1.5) (2020-02-26)
 
 
