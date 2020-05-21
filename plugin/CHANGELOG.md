@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.8...v1.1.9) (2020-05-21)
+
+
+### Bug Fixes
+
+* sideEffects for tree shacking ([7c3597f](https://github.com/farfromrefug/nativescript-preferences/commit/7c3597ffeb4e6fa31db5e693686b4371ff9cd297))
+
+
+
+
+
 ## [1.1.8](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.7...v1.1.8) (2020-05-21)
 
 **Note:** Version bump only for package nativescript-akylas-preferences
