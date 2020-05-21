@@ -2,12 +2,13 @@
     "name": "nativescript-akylas-preferences",
     "version": "1.1.6",
     "description": "Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs",
-    "main": "preferences",
+    "main": "preferences.js",
+    "module": "preferences.mjs",
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
-            "android": "3.0.0",
-            "ios": "3.0.0"
+            "android": "6.0.0",
+            "ios": "6.0.0"
         }
     },
     "keywords": [

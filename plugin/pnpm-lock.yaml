@@ -1,0 +1,10 @@
+dependencies:
+  nativescript-observable: 2.0.2
+lockfileVersion: 5.1
+packages:
+  /nativescript-observable/2.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-9nmeDLdqYxs4IXTWT/pJuJSiOwe5LWybQvhxwnwGhTQRyaIPPT1SvuIDDPyLDDt4l60PxjGrvMDtSkjsg56KFg==
+specifiers:
+  nativescript-observable: ^2.0.2
