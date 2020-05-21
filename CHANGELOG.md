@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.7...v1.1.8) (2020-05-21)
+
+
+### Bug Fixes
+
+* esm using import for tree shaking ([4d03e85](https://github.com/farfromrefug/nativescript-preferences/commit/4d03e856061b781ca7ff74fec234e026c12c5264))
+
+
+
+
+
 ## [1.1.7](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.6...v1.1.7) (2020-05-21)
 
 
