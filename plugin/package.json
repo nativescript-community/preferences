@@ -4,6 +4,7 @@
     "description": "Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs",
     "main": "preferences.js",
     "module": "preferences.mjs",
+    "sideEffects": false,
     "typings": "index.d.ts",
     "nativescript": {
         "platforms": {
