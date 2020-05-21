@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.6...v1.1.7) (2020-05-21)
+
+
+### Bug Fixes
+
+* full esm support ([6d4d2ab](https://github.com/farfromrefug/nativescript-preferences/commit/6d4d2ab54a750c6377a83cf2220bdb5cccc52e5a))
+
+
+
+
+
 ## [1.1.6](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.5...v1.1.6) (2020-03-13)
 
 
