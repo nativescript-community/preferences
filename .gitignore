@@ -27,3 +27,5 @@ src/README.md
 /plugin/README.md
 plugin/*.ts
 plugin/**/*.aar
+plugin/**/*js.map
+plugin/**/*js
