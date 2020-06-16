@@ -48,7 +48,7 @@ export class Preferences extends Common {
         if(eventName.startsWith('key:')) {
             const key = eventName.replace('key:', '');
             if (!this._observer) {
-                this._observer = ObserverClass.alloc();
+                this._observer = ObserverClass.alloc().init();
                 this._observer["owner"] = this;
             }
             this.userDefaults.addObserverForKeyPathOptionsContext(this._observer, key, NSKeyValueObservingOptions.New, null);
