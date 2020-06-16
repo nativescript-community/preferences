@@ -27,6 +27,6 @@
     },
     "license": "Apache-2.0",
     "dependencies": {
-        "nativescript-observable": "^2.0.2"
+        "nativescript-observable": "^2.0.7"
     }
 }
