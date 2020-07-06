@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.10...v1.1.11) (2020-07-06)
+
+
+### Bug Fixes
+
+* **ios:** esm fix using extend ([2a589e7](https://github.com/farfromrefug/nativescript-preferences/commit/2a589e7095ac83de90719a91ba10e17310f4d069))
+* **ios:** wrong alloc of ObservableClass ([c09beb9](https://github.com/farfromrefug/nativescript-preferences/commit/c09beb9060b85ca76cee3b948c360c306b8a4e1c))
+
+
+
+
+
 ## [1.1.10](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.9...v1.1.10) (2020-05-21)
 
 **Note:** Version bump only for package nativescript-akylas-preferences
