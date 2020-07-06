@@ -3,20 +3,21 @@ import * as app from '@nativescript/core/application';
 
 declare var UIApplicationOpenSettingsURLString: any;
 
-class ObserverClass extends NSObject {
-    owner:Preferences
+const ObserverClass = (NSObject as any).extend({
+    // owner:Preferences
     // NOTE: Refactor this - use Typescript property instead of strings....
     observeValueForKeyPathOfObjectChangeContext(path: string) {
         const owner = this.owner;
         if (owner) {
             owner.notify({
-                eventName: 'key:'+path,
-                object: owner
+                eventName: 'key:' + path,
+                object: owner,
             });
         }
-    }
-}
-
+    },
+}, {
+    // protocols: [UITextFieldDelegate]
+}) as typeof NSObject & { owner: Preferences };
 
 export class Preferences extends Common {
     userDefaults = NSUserDefaults.standardUserDefaults;
@@ -26,7 +27,7 @@ export class Preferences extends Common {
         app.ios.addNotificationObserver(NSUserDefaultsDidChangeNotification, () => {
             this.notify({
                 eventName: 'change',
-                object: this
+                object: this,
             });
         });
     }
@@ -45,19 +46,16 @@ export class Preferences extends Common {
     }
 
     onListenerAdded(eventName: string, count: number): void {
-        if(eventName.startsWith('key:')) {
+        if (eventName.startsWith('key:')) {
             const key = eventName.replace('key:', '');
             if (!this._observer) {
                 this._observer = ObserverClass.alloc().init();
-                this._observer["owner"] = this;
+                this._observer['owner'] = this;
             }
             this.userDefaults.addObserverForKeyPathOptionsContext(this._observer, key, NSKeyValueObservingOptions.New, null);
         }
-
     }
-    onListenerRemoved(eventName: string, count: number): void{
-
-    }
+    onListenerRemoved(eventName: string, count: number): void {}
 
     public openSettings() {
         UIApplication.sharedApplication.openURL(NSURL.URLWithString(UIApplicationOpenSettingsURLString));
@@ -65,7 +63,7 @@ export class Preferences extends Common {
 
     public clear() {}
 
-    registered = false
+    registered = false;
     //https://stackoverflow.com/questions/6291477/how-to-retrieve-values-from-settings-bundle-in-objective-c
     private registerDefaultsFromSettingsBundle() {
         if (this.registered) {

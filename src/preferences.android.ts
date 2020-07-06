@@ -1,5 +1,4 @@
 import * as app from '@nativescript/core/application';
-import { Frame } from '@nativescript/core/ui/frame';
 import { Common } from './preferences.common';
 
 export class Preferences extends Common {
