@@ -1,4 +1,4 @@
-var Preferences = require("nativescript-akylas-preferences").Preferences;
+var Preferences = require("@nativescript-community/preferences").Preferences;
 var preferences = new Preferences();
 
 describe("greet function", function() {

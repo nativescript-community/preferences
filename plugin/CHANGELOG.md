@@ -16,7 +16,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.11](https://github.com/nativescript-community/preferences/compare/v1.1.10...v1.1.11) (2020-07-06)
 
-**Note:** Version bump only for package nativescript-akylas-preferences
+**Note:** Version bump only for package @nativescript-community/preferences
 
 
 
@@ -24,7 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.10](https://github.com/nativescript-community/preferences/compare/v1.1.9...v1.1.10) (2020-05-21)
 
-**Note:** Version bump only for package nativescript-akylas-preferences
+**Note:** Version bump only for package @nativescript-community/preferences
 
 
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.8](https://github.com/nativescript-community/preferences/compare/v1.1.7...v1.1.8) (2020-05-21)
 
-**Note:** Version bump only for package nativescript-akylas-preferences
+**Note:** Version bump only for package @nativescript-community/preferences
 
 
 

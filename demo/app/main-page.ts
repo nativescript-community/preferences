@@ -1,6 +1,6 @@
 import * as observable from '@nativescript/core/data/observable';
 import * as pages from '@nativescript/core/ui/page';
-import { Preferences } from 'nativescript-akylas-preferences';
+import { Preferences } from '@nativescript-community/preferences';
 
 let prefs: Preferences;
 let page;

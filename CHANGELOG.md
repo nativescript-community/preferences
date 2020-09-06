@@ -28,7 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.10](https://github.com/nativescript-community/preferences/compare/v1.1.9...v1.1.10) (2020-05-21)
 
-**Note:** Version bump only for package nativescript-akylas-preferences
+**Note:** Version bump only for package @nativescript-community/preferences
 
 
 

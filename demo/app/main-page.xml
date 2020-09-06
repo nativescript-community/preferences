@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page" xmlns:ui="nativescript-akylas-preferences">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" class="page" xmlns:ui="@nativescript-community/preferences">
   <Page.actionBar>
     <ActionBar class="action-bar" title="My App">
     </ActionBar>
