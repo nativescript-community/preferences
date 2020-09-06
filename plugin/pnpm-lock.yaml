@@ -1,10 +1,10 @@
 dependencies:
-  nativescript-observable: 2.0.7
+  @nativescript-community/observable: 2.0.7
 lockfileVersion: 5.1
 packages:
-  /nativescript-observable/2.0.7:
+  /@nativescript-community/observable/2.0.7:
     dev: false
     resolution:
       integrity: sha512-ukfBQRvXlXLq3Mo+p4Y806SQN0nYl5mUMVzVS9PIXa/xiW+xgVNmHW/51oiumB9LtV/benB/6SActj3AzH2Ltg==
 specifiers:
-  nativescript-observable: ^2.0.7
+  @nativescript-community/observable: ^2.0.7

@@ -1,10 +1,11 @@
 import { Common } from './preferences.common';
-import * as app from '@nativescript/core/application';
+import { Application } from '@nativescript/core';
 
-declare var UIApplicationOpenSettingsURLString: any;
+declare let UIApplicationOpenSettingsURLString: any;
 
-const ObserverClass = (NSObject as any).extend({
-    // owner:Preferences
+@NativeClass
+class ObserverClass extends NSObject {
+    owner: Preferences;
     // NOTE: Refactor this - use Typescript property instead of strings....
     observeValueForKeyPathOfObjectChangeContext(path: string) {
         const owner = this.owner;
@@ -14,17 +15,15 @@ const ObserverClass = (NSObject as any).extend({
                 object: owner,
             });
         }
-    },
-}, {
-    // protocols: [UITextFieldDelegate]
-}) as typeof NSObject & { owner: Preferences };
+    }
+}
 
 export class Preferences extends Common {
     userDefaults = NSUserDefaults.standardUserDefaults;
     private _observer: NSObject;
     constructor() {
         super();
-        app.ios.addNotificationObserver(NSUserDefaultsDidChangeNotification, () => {
+        Application.ios.addNotificationObserver(NSUserDefaultsDidChangeNotification, () => {
             this.notify({
                 eventName: 'change',
                 object: this,
@@ -36,8 +35,8 @@ export class Preferences extends Common {
     }
 
     public getValue(key: string): any {
-        var standardUserDefaults = NSUserDefaults.standardUserDefaults;
-        var us = standardUserDefaults.objectForKey(key);
+        const standardUserDefaults = NSUserDefaults.standardUserDefaults;
+        const us = standardUserDefaults.objectForKey(key);
         if (us == null) {
             this.registerDefaultsFromSettingsBundle();
         }
@@ -70,18 +69,18 @@ export class Preferences extends Common {
             return;
         }
         this.registered = true;
-        var settingsPath = NSBundle.mainBundle.pathForResourceOfType('Settings', 'bundle');
-        let settingsBundle: NSString = NSString.stringWithString(settingsPath);
-        let rootPath = settingsBundle.stringByAppendingPathComponent('Root.plist');
+        const settingsPath = NSBundle.mainBundle.pathForResourceOfType('Settings', 'bundle');
+        const settingsBundle: NSString = NSString.stringWithString(settingsPath);
+        const rootPath = settingsBundle.stringByAppendingPathComponent('Root.plist');
 
-        var settings = NSDictionary.dictionaryWithContentsOfFile(rootPath);
-        let preferences = settings.objectForKey('PreferenceSpecifiers');
-        let prefs: number = (<any>preferences).count;
-        var defaultsToRegister = NSMutableDictionary.alloc().initWithCapacity(prefs);
+        const settings = NSDictionary.dictionaryWithContentsOfFile(rootPath);
+        const preferences = settings.objectForKey('PreferenceSpecifiers');
+        const prefs: number = (preferences as any).count;
+        const defaultsToRegister = NSMutableDictionary.alloc().initWithCapacity(prefs);
 
-        for (var i = 0; i < prefs; i++) {
-            var prefSpecification = (<any>preferences).objectAtIndex(i);
-            var key = prefSpecification.objectForKey('Key');
+        for (let i = 0; i < prefs; i++) {
+            const prefSpecification = (preferences as any).objectAtIndex(i);
+            const key = prefSpecification.objectForKey('Key');
             if (key) {
                 defaultsToRegister.setObjectForKey('', key);
             }

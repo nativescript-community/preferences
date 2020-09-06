@@ -1,7 +1,6 @@
-import Observable from 'nativescript-observable';
+import Observable from '@nativescript-community/observable';
 
 export abstract class Common extends Observable {
-
     public abstract setValue(key: string, value: any);
 
     public abstract getValue(key: string, defaultValue?: any): any;
