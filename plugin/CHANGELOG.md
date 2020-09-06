@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/farfromrefug/nativescript-preferences/compare/v1.1.11...v1.2.0) (2020-09-06)
+
+
+### Features
+
+* N7 and new plugin name ([1be2dd5](https://github.com/farfromrefug/nativescript-preferences/commit/1be2dd53a4905cffcfd6c79dfd125edb5991da35))
+
+
+
+
+
 ## [1.1.11](https://github.com/nativescript-community/preferences/compare/v1.1.10...v1.1.11) (2020-07-06)
 
 **Note:** Version bump only for package nativescript-akylas-preferences
