@@ -23,6 +23,7 @@ export class Preferences extends Common {
     private _observer: NSObject;
     constructor() {
         super();
+        this.registerDefaultsFromSettingsBundle();
         Application.ios.addNotificationObserver(NSUserDefaultsDidChangeNotification, () => {
             this.notify({
                 eventName: 'change',
