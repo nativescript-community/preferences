@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.3...v1.2.4) (2020-10-03)
+
+
+### Bug Fixes
+
+* ios fix when not using setValue/getValue ([c16fee5](https://github.com/farfromrefug/nativescript-preferences/commit/c16fee5c27e857b21804049c1dbaa2aa997e6710))
+
+
+
+
+
 ## [1.2.3](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.2...v1.2.3) (2020-09-07)
 
 **Note:** Version bump only for package @nativescript-community/preferences
