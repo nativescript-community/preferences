@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.4...v1.2.5) (2020-10-05)
+
+
+### Bug Fixes
+
+* ios prevent crash if no Settings.bundle ([fc76149](https://github.com/farfromrefug/nativescript-preferences/commit/fc761494e430634250722c358c8f02e088dc0bdc))
+
+
+
+
+
 ## [1.2.4](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.3...v1.2.4) (2020-10-03)
 
 
