@@ -71,6 +71,9 @@ export class Preferences extends Common {
         }
         this.registered = true;
         const settingsPath = NSBundle.mainBundle.pathForResourceOfType('Settings', 'bundle');
+        if (!settingsPath) {
+            return;
+        }
         const settingsBundle: NSString = NSString.stringWithString(settingsPath);
         const rootPath = settingsBundle.stringByAppendingPathComponent('Root.plist');
 
