@@ -20,7 +20,7 @@ class ObserverClass extends NSObject {
 
 export class Preferences extends Common {
     userDefaults = NSUserDefaults.standardUserDefaults;
-    private _observer: NSObject;
+    private _observers: { [k: string]: NSObject } = {};
     constructor() {
         super();
         this.registerDefaultsFromSettingsBundle();
@@ -46,16 +46,25 @@ export class Preferences extends Common {
     }
 
     onListenerAdded(eventName: string, count: number): void {
-        if (eventName.startsWith('key:')) {
+        if (eventName.startsWith('key:') && count === 1) {
             const key = eventName.replace('key:', '');
-            if (!this._observer) {
-                this._observer = ObserverClass.alloc().init();
-                this._observer['owner'] = this;
+            if (!this._observers[key]) {
+                this._observers[key] = ObserverClass.alloc().init();
+                this._observers[key]['owner'] = this;
             }
-            this.userDefaults.addObserverForKeyPathOptionsContext(this._observer, key, NSKeyValueObservingOptions.New, null);
+            this.userDefaults.addObserverForKeyPathOptionsContext(this._observers[key], key, NSKeyValueObservingOptions.New, null);
         }
     }
-    onListenerRemoved(eventName: string, count: number): void {}
+    onListenerRemoved(eventName: string, count: number): void {
+        if (eventName.startsWith('key:') && count === 0) {
+            const key = eventName.replace('key:', '');
+            if (this._observers[key]) {
+            this.userDefaults.removeObserverForKeyPath(this._observers[key], key);
+            this._observers[key] = null;
+            delete this._observers[key];
+            }
+        }
+    }
 
     public openSettings() {
         UIApplication.sharedApplication.openURL(NSURL.URLWithString(UIApplicationOpenSettingsURLString));
