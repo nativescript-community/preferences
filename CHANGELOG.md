@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.5...v1.2.6) (2020-10-11)
+
+
+### Bug Fixes
+
+* ios fix for listeners ([fdfb35f](https://github.com/farfromrefug/nativescript-preferences/commit/fdfb35f87a983388601433ab1e215e0290d05bde))
+
+
+
+
+
 ## [1.2.5](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.4...v1.2.5) (2020-10-05)
 
 
