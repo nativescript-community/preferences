@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.6...v1.3.0) (2021-10-21)
+
+
+### Features
+
+* **android:** native-api-usae ([a9aac41](https://github.com/farfromrefug/nativescript-preferences/commit/a9aac41024545ca8e15d67eb7f26ec9afdf54a99))
+
+
+
+
+
 ## [1.2.6](https://github.com/farfromrefug/nativescript-preferences/compare/v1.2.5...v1.2.6) (2020-10-11)
 
 **Note:** Version bump only for package @nativescript-community/preferences
