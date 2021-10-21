@@ -55,7 +55,7 @@ export class Preferences extends Common {
         const ID = 5836;
         // var activity = frameModule.topmost().android.activity;
         const activity = androidApp.foregroundActivity || androidApp.startActivity;
-        return new Promise((resolve, reject) => {
+        return new Promise<void>((resolve, reject) => {
             const onActivityResultHandler = (data: AndroidActivityResultEventData) => {
                 if (data.requestCode === ID) {
                     androidApp.off(AndroidApplication.activityResultEvent, onActivityResultHandler);
