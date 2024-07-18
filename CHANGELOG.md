@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/nativescript-community/preferences/compare/v1.3.1...v1.3.2) (2024-07-18)
+
+### Bug Fixes
+
+* **android:** regression fix ([f527592](https://github.com/nativescript-community/preferences/commit/f527592c53ba95570b3d7d52a8789c34789348dd))
+
 ## [1.3.1](https://github.com/nativescript-community/preferences/compare/v1.3.0...v1.3.1) (2024-07-18)
 
 ### Bug Fixes
