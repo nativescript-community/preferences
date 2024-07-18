@@ -1,7 +1,7 @@
 {
     "uses": [
-        "com.nativescript.preferences:NativescriptSettingsActivity*",
-        "android.content:SharedPreferences*",
+        "com.nativescript.preferences:NativescriptSettingsActivity",
+        "android.content:SharedPreferences",
         "android.content.SharedPreferences:OnSharedPreferenceChangeListener*"
     ]
 }

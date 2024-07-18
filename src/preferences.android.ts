@@ -1,13 +1,25 @@
 import {
     AndroidActivityResultEventData,
-    AndroidApplication,
-    android as androidApp,
-    getNativeApplication,
-} from '@nativescript/core/application';
+    Application,
+    Utils
+} from '@nativescript/core';
 import { Common } from './preferences.common';
 
+
 export class Preferences extends Common {
-    public setValue(key: string, value: any) {
+    sharedPreferences: android.content.SharedPreferences;
+    listener: android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+
+    destroy() {
+        if (this.sharedPreferences) {
+            if (this.listener) {
+                this.sharedPreferences.unregisterOnSharedPreferenceChangeListener(this.listener);
+                this.listener = null;
+            }
+            this.sharedPreferences = null;
+        }
+    }
+     public setValue(key: string, value: any) {
         const allPrefs = this.getPreferences().getAll();
         const pref = allPrefs.get(key);
 
@@ -38,7 +50,6 @@ export class Preferences extends Common {
             return this.getPreferences().getInt(key, defaultValue);
         }
 
-        //Fallback to assuming string, because ¯\_(ツ)_/¯
         return null;
     }
 
@@ -54,15 +65,15 @@ export class Preferences extends Common {
     public openSettings() {
         const ID = 5836;
         // var activity = frameModule.topmost().android.activity;
-        const activity = androidApp.foregroundActivity || androidApp.startActivity;
+        const activity = Application.android.foregroundActivity || Application.android.startActivity;
         return new Promise<void>((resolve, reject) => {
             const onActivityResultHandler = (data: AndroidActivityResultEventData) => {
                 if (data.requestCode === ID) {
-                    androidApp.off(AndroidApplication.activityResultEvent, onActivityResultHandler);
+                    Application.android.off(Application.android.activityResultEvent, onActivityResultHandler);
                     resolve();
                 }
             };
-            androidApp.on(AndroidApplication.activityResultEvent, onActivityResultHandler);
+            Application.android.on(Application.android.activityResultEvent, onActivityResultHandler);
             try {
                 activity.startActivityForResult(
                     new android.content.Intent(activity, com.nativescript.preferences.NativescriptSettingsActivity.class),
@@ -77,23 +88,18 @@ export class Preferences extends Common {
         // var intent = new android.content.Intent(androidApp.foregroundActivity, com.nativescript.preferences.NativescriptSettingsActivity.class);
         // activity.startActivity(intent);
     }
-    sharedPreferences: android.content.SharedPreferences;
-    listener: android.content.SharedPreferences.OnSharedPreferenceChangeListener;
     private getPreferences() {
         if (!this.sharedPreferences) {
-            this.sharedPreferences = (getNativeApplication() as android.app.Application)
-                .getApplicationContext()
+            this.sharedPreferences = Utils.android.getApplicationContext()
                 .getSharedPreferences('prefs.db', 0);
             this.listener = new android.content.SharedPreferences.OnSharedPreferenceChangeListener({
                 onSharedPreferenceChanged: (pref, key) => {
                     this.notify({
                         eventName: 'change',
-                        object: this,
                         key,
                     });
                     this.notify({
                         eventName: 'key:' + key,
-                        object: this,
                     });
                 },
             });
