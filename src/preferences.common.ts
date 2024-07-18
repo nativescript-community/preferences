@@ -8,4 +8,6 @@ export abstract class Common extends Observable {
     public abstract openSettings();
 
     public abstract clear();
+
+    public close() {};
 }

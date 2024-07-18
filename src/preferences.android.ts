@@ -107,4 +107,18 @@ export class Preferences extends Common {
         }
         return this.sharedPreferences;
     }
+
+
+    /**
+     * method used to clear what's needed in cases like terminating in a worker
+     *
+     * @memberof Preferences
+     */
+    public close() {
+        if (this.listener && this.sharedPreferences) {
+            this.sharedPreferences.unregisterOnSharedPreferenceChangeListener(this.listener);
+            this.sharedPreferences = null;
+            this.listener = null;
+        }
+    }
 }
