@@ -1,0 +1,95 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs</title><meta name="description" content="Documentation for Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"><a href="https://docs.nativescript.org">Nativescript Doc</a></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h2>Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs</h2></div><div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->[![Twitter Follow][twitter-image]][twitter-url]
+
+<p><a href="#md:nativescript-communitypreferences"></a></p>
+<a id="md:nativescript-communitypreferences" class="tsd-anchor"></a><h1><a href="#md:nativescript-communitypreferences">@nativescript-community/preferences</a></h1><p>This plugin allows native preference saving\loading on iOS and Android</p>
+<img src="https://raw.githubusercontent.com/sitefinitysteve/@nativescript-community/preferences/master/images/ios-sample.gif" width="200" />
+<img src="https://raw.githubusercontent.com/sitefinitysteve/@nativescript-community/preferences/master/images/android-sample.gif" width="200" />
+
+
+<p><a href="#md:ios-prerequisites"></a></p>
+<a id="md:ios-prerequisites" class="tsd-anchor"></a><h2><a href="#md:ios-prerequisites">iOS Prerequisites</a></h2><ul>
+<li>Create iOS Settings.bundle files in App_Resources/iOS <a href="https://github.com/sitefinitysteve/@nativescript-community/preferences/tree/master/demo/app/App_Resources/iOS/Settings.bundle">See Demo</a>
+or <a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html">Apple Developer docs</a></li>
+</ul>
+<p><a href="#md:android-prerequisites"></a></p>
+<a id="md:android-prerequisites" class="tsd-anchor"></a><h2><a href="#md:android-prerequisites">Android Prerequisites</a></h2><ul>
+<li>In App_Resources/Android/xml create <a href="https://github.com/sitefinitysteve/@nativescript-community/preferences/blob/master/demo/app/App_Resources/Android/xml/preferences.xml">preferences.xml</a></li>
+<li>Android <a href="https://developer.android.com/reference/android/preference/PreferenceScreen.html">PreferenceScreen docs</a></li>
+</ul>
+<p><a href="#md:installation"></a></p>
+<a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><p>Describe your plugin installation steps. Ideally it would be something like:</p>
+<pre><code class="language-javascript"><span class="hl-0">tns</span><span class="hl-1"> </span><span class="hl-0">plugin</span><span class="hl-1"> </span><span class="hl-0">add</span><span class="hl-1"> @</span><span class="hl-0">nativescript</span><span class="hl-1">-</span><span class="hl-0">community</span><span class="hl-1">/</span><span class="hl-0">preferences</span>
+</code><button>Copy</button></pre>
+<p><a href="#md:usage-"></a></p>
+<a id="md:usage" class="tsd-anchor"></a><h2><a href="#md:usage">Usage</a></h2><pre><code class="language-javascript"><span class="hl-1">    </span><span class="hl-2">var</span><span class="hl-1"> </span><span class="hl-0">prefs</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-3">Preferences</span><span class="hl-1">();</span><br/><br/><span class="hl-1">    </span><span class="hl-4">//Get existing value</span><br/><span class="hl-1">    </span><span class="hl-0">prefs</span><span class="hl-1">.</span><span class="hl-3">getValue</span><span class="hl-1">(</span><span class="hl-5">&quot;name_preference&quot;</span><span class="hl-1">);</span><br/><br/><span class="hl-1">    </span><span class="hl-4">//Set value</span><br/><span class="hl-1">    </span><span class="hl-0">prefs</span><span class="hl-1">.</span><span class="hl-3">setValue</span><span class="hl-1">(</span><span class="hl-5">&quot;name_preference&quot;</span><span class="hl-1">, </span><span class="hl-5">&quot;some new text&quot;</span><span class="hl-1">);</span>
+</code><button>Copy</button></pre>
+<p><a href="#md:api"></a></p>
+<a id="md:api" class="tsd-anchor"></a><h2><a href="#md:api">API</a></h2><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>openSettings(): any;</td>
+<td></td>
+<td>Opens the native settings panes</td>
+</tr>
+<tr>
+<td>getValue(key: string): any;</td>
+<td></td>
+<td>Gets the value for the preference</td>
+</tr>
+<tr>
+<td>setValue(key: string, value: any): void;</td>
+<td></td>
+<td>Sets the passed value to the preference</td>
+</tr>
+</tbody></table>
+<p><a href="#md:license"></a></p>
+<a id="md:license" class="tsd-anchor"></a><h2><a href="#md:license">License</a></h2><p>Apache License Version 2.0, January 2004</p>
+<p><a href="#md:demos-and-development"></a></p>
+<a id="md:demos-and-development" class="tsd-anchor"></a><h2><a href="#md:demos-and-development">Demos and Development</a></h2><a id="md:repo-setup" class="tsd-anchor"></a><h3><a href="#md:repo-setup">Repo Setup</a></h3><p>The repo uses submodules. If you did not clone with <code> --recursive</code> then you need to call</p>
+<pre><code><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-0">submodule</span><span class="hl-1"> </span><span class="hl-0">update</span><span class="hl-1"> --</span><span class="hl-0">init</span>
+</code><button>Copy</button></pre>
+<p>The package manager used to install and link dependencies must be <code>pnpm</code> or <code>yarn</code>. <code>npm</code> wont work.</p>
+<p>To develop and test:
+if you use <code>yarn</code> then run <code>yarn</code>
+if you use <code>pnpm</code> then run <code>pnpm i</code></p>
+<p><strong>Interactive Menu:</strong></p>
+<p>To start the interactive menu, run <code>npm start</code> (or <code>yarn start</code> or <code>pnpm start</code>). This will list all of the commonly used scripts.</p>
+<a id="md:build" class="tsd-anchor"></a><h3><a href="#md:build">Build</a></h3><pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">build.all</span>
+</code><button>Copy</button></pre>
+<p>WARNING: it seems <code>yarn build.all</code> wont always work (not finding binaries in <code>node_modules/.bin</code>) which is why the doc explicitly uses <code>npm run</code></p>
+<a id="md:demos" class="tsd-anchor"></a><h3><a href="#md:demos">Demos</a></h3><pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">demo.[ng</span><span class="hl-1">|</span><span class="hl-3">react</span><span class="hl-1">|</span><span class="hl-3">svelte</span><span class="hl-1">|</span><span class="hl-3">vue].[ios</span><span class="hl-1">|</span><span class="hl-3">android]</span><br/><br/><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">demo.svelte.ios</span><span class="hl-1"> </span><span class="hl-4"># Example</span>
+</code><button>Copy</button></pre>
+<p>Demo setup is a bit special in the sense that if you want to modify/add demos you dont work directly in <code>demo-[ng|react|svelte|vue]</code>
+Instead you work in <code>demo-snippets/[ng|react|svelte|vue]</code>
+You can start from the <code>install.ts</code> of each flavor to see how to register new demos </p>
+<p><a href="#md:contributing"></a></p>
+<a id="md:contributing" class="tsd-anchor"></a><h2><a href="#md:contributing">Contributing</a></h2><a id="md:update-repo" class="tsd-anchor"></a><h3><a href="#md:update-repo">Update repo</a></h3><p>You can update the repo files quite easily</p>
+<p>First update the submodules</p>
+<pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">update</span>
+</code><button>Copy</button></pre>
+<p>Then commit the changes
+Then update common files</p>
+<pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">sync</span>
+</code><button>Copy</button></pre>
+<p>Then you can run <code>yarn|pnpm</code>, commit changed files if any</p>
+<a id="md:update-readme" class="tsd-anchor"></a><h3><a href="#md:update-readme">Update readme</a></h3><pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">readme</span>
+</code><button>Copy</button></pre>
+<a id="md:update-doc" class="tsd-anchor"></a><h3><a href="#md:update-doc">Update doc</a></h3><pre><code class="language-bash"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">doc</span>
+</code><button>Copy</button></pre>
+<a id="md:publish" class="tsd-anchor"></a><h3><a href="#md:publish">Publish</a></h3><p>The publishing is completely handled by <code>lerna</code> (you can add <code>-- --bump major</code> to force a major release)
+Simply run </p>
+<pre><code class="language-shell"><span class="hl-3">npm</span><span class="hl-1"> </span><span class="hl-5">run</span><span class="hl-1"> </span><span class="hl-5">publish</span>
+</code><button>Copy</button></pre>
+<a id="md:modifying-submodules" class="tsd-anchor"></a><h3><a href="#md:modifying-submodules">modifying submodules</a></h3><p>The repo uses https:// for submodules which means you won&#39;t be able to push directly into the submodules.
+One easy solution is t modify <code>~/.gitconfig</code> and add</p>
+<pre><code><span class="hl-1">[</span><span class="hl-0">url</span><span class="hl-1"> </span><span class="hl-5">&quot;ssh://git@github.com/&quot;</span><span class="hl-1">]</span><br/><span class="hl-1">    </span><span class="hl-0">pushInsteadOf</span><span class="hl-1"> = </span><span class="hl-6">https</span><span class="hl-1">:</span><span class="hl-4">//github.com/</span>
+</code><button>Copy</button></pre>
+<p><a href="#md:questions"></a></p>
+<a id="md:questions" class="tsd-anchor"></a><h2><a href="#md:questions">Questions</a></h2><p>If you have any questions/issues/comments please feel free to create an issue or start a conversation in the <a href="https://nativescript.org/discord">NativeScript Community Discord</a>.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#md:nativescript-communitypreferences"><span>@nativescript-<wbr/>community/preferences</span></a><ul><li><a href="#md:ios-prerequisites"><span>iOS <wbr/>Prerequisites</span></a></li><li><a href="#md:android-prerequisites"><span>Android <wbr/>Prerequisites</span></a></li><li><a href="#md:installation"><span>Installation</span></a></li><li><a href="#md:usage"><span>Usage</span></a></li><li><a href="#md:api"><span>API</span></a></li><li><a href="#md:license"><span>License</span></a></li><li><a href="#md:demos-and-development"><span>Demos and <wbr/>Development</span></a></li><li><ul><li><a href="#md:repo-setup"><span>Repo <wbr/>Setup</span></a></li><li><a href="#md:build"><span>Build</span></a></li><li><a href="#md:demos"><span>Demos</span></a></li></ul></li><li><a href="#md:contributing"><span>Contributing</span></a></li><li><ul><li><a href="#md:update-repo"><span>Update repo</span></a></li><li><a href="#md:update-readme"><span>Update readme</span></a></li><li><a href="#md:update-doc"><span>Update doc</span></a></li><li><a href="#md:publish"><span>Publish</span></a></li><li><a href="#md:modifying-submodules"><span>modifying submodules</span></a></li></ul></li><li><a href="#md:questions"><span>Questions</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html" class="current"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="assets/icons.svg#icon-1"></use></svg><span>Common API to allow users to use native (familiar) app settings screens instead of having to craft custom UIs</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base="."><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
